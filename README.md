@@ -7,6 +7,10 @@ jquery.cssliveupdate
 
 Typically, the source element is either a form field (`textarea`, `input` or `select`) or a regular element with the `contenteditable` attribute set.
 
+## Demo
+
+You can view and try out a live demo at this address http://cote.cc/projects/cssliveupdate
+
 ## Setup
 
 To use it, first load jQuery and the CssLiveUpdate plugin:
@@ -41,14 +45,15 @@ CssLiveUpdate has been tested and known to work on :
 
 Let me know if you test it on other platforms so I can add them here.
 
-## Demo
-
-You can view and try out a live demo at this address http://cote.cc/projects/cssliveupdate
-
 ## Requirements
 
 * [jQuery](http://jquery.com/): only version 2.0.3 has been tested so far. If you test it on other versions, let me know so I can lover the minimum version.
 
+## Reporting an Issue
+
+1. Before reporting, make sure you have the latest version.
+2. Make sure the problem you are reporting is reproducible. Use http://jsbin.com to provide an example page.
+3. Indicate what browser(s) the issue can be reproduced in. **Note: IE Compatibilty modes issues will not be addressed.**
 
 ## License
 
