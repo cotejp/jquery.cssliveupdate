@@ -47,7 +47,7 @@ Let me know if you test it on other platforms so I can add them here.
 
 ## Requirements
 
-* [jQuery](http://jquery.com/): only version 2.0.3 has been tested so far. If you test it on other versions, let me know so I can lover the minimum version.
+* [jQuery](http://jquery.com/): only version 2.0.3 has been tested so far. If you test it on other versions, let me know so I can lower the minimum version.
 
 ## Reporting an Issue
 
