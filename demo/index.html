@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html>
+
+    <head>
+    
+        <meta charset="UTF-8">
+        <title>CssLiveUpdate Demo - by Jean-Philippe Côté</title>
+        
+        <style type="text/css">
+            body {
+				background-color:#333;
+				padding: 4%;
+				width: 92%;
+				color:#CCC;
+				margin: 0;
+				font: 1.5em "Gill Sans", "Gill Sans MT", "Myriad Pro", Helvetica, Arial, sans-serif;
+				text-align:justify;
+				float: left;
+        	}
+			#css, #demo {
+				float: left;
+				width: 44%;
+				height: 250px;
+				border: #666 solid 1px;
+				padding: 2%;
+				color: white;
+				font: 0.8em monospace 
+			}
+			h1 { margin: 0.2em 0; }
+			#demo { float: right }
+			pre, p { margin: 0; }
+			p { margin-bottom: 1em; }
+			footer { font-size:0.75em; padding-top:1em; clear:both; }
+			a { color: #CC9393; }
+        </style>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="../src/jquery.cssliveupdate-0.5a.js"></script>
+        
+        <!-- Highlight.js only does syntax coloring and is otherwise unrelated to this example. -->
+        <link rel="stylesheet" href="js/highlight.js/zenburn.css">
+		<script src="js/highlight.js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        
+    </head>
+    
+    <body>
+    
+        <h1>CssLiveUpdate Demo</h1>
+
+        <p>Modify the CSS rules on the left to see the effect on the right. For example, 
+        uncomment the <code>color: #363;</code> instruction to change the color of the text in 
+        the <code>#demo</code> div.</p>
+    
+        <!-- The container of the CSS rules (could also be a form tag like textarea) -->
+        <pre><code id="css" class="css" data-cssliveupdate-target="#demo" contenteditable="true">#demo {
+  border: #666 solid 1px;
+  /* color: red; */
+}</code></pre>
+        
+        <div id="demo">#demo</div>
+        
+        <footer>CSS syntax coloring is provided by the awesome 
+        <a target="_blank" href="http://softwaremaniacs.org/soft/highlight/en/">highlight.js</a> 
+        library.</footer>
+
+    </body>
+    
+</html>
