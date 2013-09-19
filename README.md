@@ -1,6 +1,8 @@
 jquery.cssliveupdate
 ====================
 
+WARNING: THIS PLUGIN HAS NOT BEEN TESTED ENOUGH TO BE CONSIDERED PRODUCTION-READY (HENCE THE ALPHA VERSION). USE AT YOUR OWN RISK. MEANWHILE, YOU ARE WELCOME TO SEND ME COMMENTS, SUGGESTIONS AND BUG REPORTS.
+
 ## Description
 
 **CssLiveUpdate** is a jQuery plugin to continually update the `style` attribute of an element with the CSS rules found in another element. It facilitates the creation of live CSS demos for conferences, courses, etc.
@@ -43,7 +45,7 @@ CssLiveUpdate has been tested and known to work on :
 * Chrome 29 (Mac, Win)
 * Internet Explorer 10 (Win)
 
-Let me know if you test it on other platforms so I can add them here.
+Let me know if you test it on other/older browsers and platforms so I can add them here.
 
 ## Requirements
 
