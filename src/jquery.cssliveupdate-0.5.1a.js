@@ -27,8 +27,6 @@
  * Internet Explorer 10 (Win). Let me know if you test it on other platforms.
  *
  * (c) 2013, Jean-Philippe Côté - http://cote.cc/projects/cssliveupdate
- *
- * @todo Insert TAB (or spaces) at cursor position when the TAB key is pressed. 
  */
 (function ($) {
 
