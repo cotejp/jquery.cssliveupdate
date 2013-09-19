@@ -15,21 +15,21 @@ You can view and try out a live demo at this address http://cote.cc/projects/css
 
 To use it, first load jQuery and the CssLiveUpdate plugin:
 
-```
+```html
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="js/jquery.cssliveupdate.js"></script>
 ```
 
 Then, simply assign a jQuery selector to the `data-cssliveupdate-target` attribute of the element containing the CSS rules that will be modified. This selector should point to the element(s) that will have its `style` attribute updated:
 
-```
+```html
 <textarea data-cssliveupdate-target="#demo">a {color: red;}</textarea>
 <div id="demo">This div will have it's "style" attribute modified!</div>
 ```
 
 All fields with `data-cssliveupdate-target` defined are automatically updated. If you prefer, you can alternatively manually activate or deactivate the live update:
 
-```
+```javascript
 $("#some-source-element").cssLiveUpdate("activate", "some-target-element");
 $("#some-source-element").cssLiveUpdate("deactivate");
 ```
