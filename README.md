@@ -47,7 +47,7 @@ You can view and try out a live demo at this address http://cote.cc/projects/css
 
 ## Requirements
 
-* [jQuery](http://jquery.com/) v. ???
+* [jQuery](http://jquery.com/): only version 2.0.3 has been tested so far. If you test it on other versions, let me know so I can lover the minimum version.
 
 
 ## License
