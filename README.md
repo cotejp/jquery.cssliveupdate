@@ -1,9 +1,13 @@
 jquery.cssliveupdate
 ====================
 
+## Description
+
 **CssLiveUpdate** is a jQuery plugin to continually update the `style` attribute of an element with the CSS rules found in another element. It facilitates the creation of live CSS demos for conferences, courses, etc.
 
 Typically, the source element is either a form field (`textarea`, `input` or `select`) or a regular element with the `contenteditable` attribute set.
+
+## Setup
 
 To use it, first load jQuery and the CssLiveUpdate plugin:
 
@@ -26,6 +30,26 @@ $("#some-source-element").cssLiveUpdate("activate", "some-target-element");
 $("#some-source-element").cssLiveUpdate("deactivate");
 ```
 
-CssLiveUpdate has been tested and known to work on : Safari 6 (Mac), Firefox 23 (Mac), Chrome 29 (Mac, Win), Internet Explorer 10 (Win). Let me know if you test it on other platforms.
+## Browser support
+
+CssLiveUpdate has been tested and known to work on : 
+
+* Safari 6 (Mac)
+* Firefox 23 (Mac)
+* Chrome 29 (Mac, Win)
+* Internet Explorer 10 (Win)
+
+Let me know if you test it on other platforms so I can add them here.
+
+## Demo
 
 You can view a live demo at this address http://cote.cc/projects/cssliveupdate
+
+## Requirements
+
+* [jQuery](http://jquery.com/) v. ???
+
+
+## License
+
+To be completed.
