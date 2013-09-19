@@ -1,71 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="jquery.cssliveupdate : A jQuery plugin to continually update the &quot;style&quot; attribute of an element with the content of another element. It facilitates the creation of live CSS demos for conferences, courses, etc." />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>jquery.cssliveupdate by cotejp</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>jquery.cssliveupdate</title>
   </head>
-
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/cotejp/jquery.cssliveupdate">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/cotejp/jquery.cssliveupdate/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/cotejp/jquery.cssliveupdate/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/cotejp/jquery.cssliveupdate">View on GitHub</a>
+    <div class="wrapper">
 
-          <h1 id="project_title">jquery.cssliveupdate</h1>
-          <h2 id="project_tagline">A jQuery plugin to continually update the &quot;style&quot; attribute of an element with the content of another element. It facilitates the creation of live CSS demos for conferences, courses, etc.</h2>
+      <section>
+        <div id="title">
+          <h1>jquery.cssliveupdate</h1>
+          <p>A jQuery plugin to continually update the &quot;style&quot; attribute of an element with the content of another element. It facilitates the creation of live CSS demos for conferences, courses, etc.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/cotejp">cotejp</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/cotejp/jquery.cssliveupdate/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/cotejp/jquery.cssliveupdate/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
         <h1>
 <a name="jquerycssliveupdate" class="anchor" href="#jquerycssliveupdate"><span class="octicon octicon-link"></span></a>jquery.cssliveupdate</h1>
 
-<p>A jQuery plugin to continually update the "style" attribute of an element with the CSS rules found in another element. It facilitates the creation of live CSS demos for conferences, courses, etc.</p>
+<h2>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Description</h2>
 
-<p>Typically, the source element is either a form field (textarea, input or select) or a regular element with the "contenteditable" attribute set.</p>
+<p><strong>CssLiveUpdate</strong> is a jQuery plugin to continually update the <code>style</code> attribute of an element with the CSS rules found in another element. It facilitates the creation of live CSS demos for conferences, courses, etc.</p>
+
+<p>Typically, the source element is either a form field (<code>textarea</code>, <code>input</code> or <code>select</code>) or a regular element with the <code>contenteditable</code> attribute set.</p>
+
+<h2>
+<a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h2>
 
 <p>To use it, first load jQuery and the CssLiveUpdate plugin:</p>
 
-<p><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script src="js/jquery.cssliveupdate.js"&gt;&lt;/script&gt;</code></p>
+<pre><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.cssliveupdate.js"&gt;&lt;/script&gt;
+</code></pre>
 
-<p>Then, simply assign a jQuery selector to the "data-cssliveupdate-target" attribute of the element containing the CSS rules that will be modified. This selector should point to the element that will have its "style" attribute updated:</p>
+<p>Then, simply assign a jQuery selector to the <code>data-cssliveupdate-target</code> attribute of the element containing the CSS rules that will be modified. This selector should point to the element(s) that will have its <code>style</code> attribute updated:</p>
 
-<p><code>&lt;textarea data-cssliveupdate-target="#demo"&gt;a {color: red;}&lt;/textarea&gt;
-&lt;div id="demo"&gt;This div will have it's "style" attribute modified!&lt;/div&gt;</code></p>
+<pre><code>&lt;textarea data-cssliveupdate-target="#demo"&gt;a {color: red;}&lt;/textarea&gt;
+&lt;div id="demo"&gt;This div will have it's "style" attribute modified!&lt;/div&gt;
+</code></pre>
 
-<p>All fields with "data-cssliveupdate-target" defined are automatically updated. If you prefer, you can alternatively manually activate or deactivate the live update:</p>
+<p>All fields with <code>data-cssliveupdate-target</code> defined are automatically updated. If you prefer, you can alternatively manually activate or deactivate the live update:</p>
 
-<p><code>$("#some-source-element").cssLiveUpdate("activate", "some-target-element");
-$("#some-source-element").cssLiveUpdate("deactivate");</code></p>
+<pre><code>$("#some-source-element").cssLiveUpdate("activate", "some-target-element");
+$("#some-source-element").cssLiveUpdate("deactivate");
+</code></pre>
 
-<p>Tested and known to work on : Safari 6 (Mac), Firefox 23 (Mac), Chrome 29 (Mac, Win), Internet Explorer 10 (Win). Let me know if you test it on other platforms.</p>
+<h2>
+<a name="browser-support" class="anchor" href="#browser-support"><span class="octicon octicon-link"></span></a>Browser support</h2>
+
+<p>CssLiveUpdate has been tested and known to work on : </p>
+
+<ul>
+<li>Safari 6 (Mac)</li>
+<li>Firefox 23 (Mac)</li>
+<li>Chrome 29 (Mac, Win)</li>
+<li>Internet Explorer 10 (Win)</li>
+</ul><p>Let me know if you test it on other platforms so I can add them here.</p>
+
+<h2>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p>You can view a live demo at this address <a href="http://cote.cc/projects/cssliveupdate">http://cote.cc/projects/cssliveupdate</a></p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>
+<a href="http://jquery.com/">jQuery</a> v. ???</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>To be completed.</p>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">jquery.cssliveupdate maintained by <a href="https://github.com/cotejp">cotejp</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
