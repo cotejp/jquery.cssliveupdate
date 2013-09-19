@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="jquery.cssliveupdate : A jQuery plugin to continually update the &quot;style&quot; attribute of an element with the content of another element. It facilitates the creation of live CSS demos for conferences, courses, etc." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>jquery.cssliveupdate</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/cotejp/jquery.cssliveupdate">View on GitHub</a>
+
+          <h1 id="project_title">jquery.cssliveupdate</h1>
+          <h2 id="project_tagline">A jQuery plugin to continually update the &quot;style&quot; attribute of an element with the content of another element. It facilitates the creation of live CSS demos for conferences, courses, etc.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/cotejp/jquery.cssliveupdate/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/cotejp/jquery.cssliveupdate/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="jquerycssliveupdate" class="anchor" href="#jquerycssliveupdate"><span class="octicon octicon-link"></span></a>jquery.cssliveupdate</h1>
+
+<p>A jQuery plugin to continually update the "style" attribute of an element with the CSS rules found in another element. It facilitates the creation of live CSS demos for conferences, courses, etc.</p>
+
+<p>Typically, the source element is either a form field (textarea, input or select) or a regular element with the "contenteditable" attribute set.</p>
+
+<p>To use it, first load jQuery and the CssLiveUpdate plugin:</p>
+
+<p><code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.cssliveupdate.js"&gt;&lt;/script&gt;</code></p>
+
+<p>Then, simply assign a jQuery selector to the "data-cssliveupdate-target" attribute of the element containing the CSS rules that will be modified. This selector should point to the element that will have its "style" attribute updated:</p>
+
+<p><code>&lt;textarea data-cssliveupdate-target="#demo"&gt;a {color: red;}&lt;/textarea&gt;
+&lt;div id="demo"&gt;This div will have it's "style" attribute modified!&lt;/div&gt;</code></p>
+
+<p>All fields with "data-cssliveupdate-target" defined are automatically updated. If you prefer, you can alternatively manually activate or deactivate the live update:</p>
+
+<p><code>$("#some-source-element").cssLiveUpdate("activate", "some-target-element");
+$("#some-source-element").cssLiveUpdate("deactivate");</code></p>
+
+<p>Tested and known to work on : Safari 6 (Mac), Firefox 23 (Mac), Chrome 29 (Mac, Win), Internet Explorer 10 (Win). Let me know if you test it on other platforms.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">jquery.cssliveupdate maintained by <a href="https://github.com/cotejp">cotejp</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
