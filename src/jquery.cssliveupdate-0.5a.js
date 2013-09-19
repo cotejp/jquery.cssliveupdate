@@ -1,5 +1,5 @@
 /*!
- * CssLiveUpdate jQuery plugin v0.5a
+ * CssLiveUpdate jQuery plugin v0.5.1a
  *
  * Continually updates a target element's "style" attribute with the content from a watched
  * source element. Typically, the source element is either a form field (textarea, input or
@@ -30,13 +30,13 @@
  *
  * @todo Insert TAB (or spaces) at cursor position when the TAB key is pressed. 
  */
- ;(function ($) {
-	 
-	// Plugin name used, notably, for event namespacing (it's outside the plugin function
-	// because it should only be instantiated once).
-	var pluginName = 'CssLiveUpdate';
-	
-	/**
+(function ($) {
+
+    // Plugin name used, notably, for event namespacing (it's outside the plugin function
+    // because it should only be instantiated once).
+    var pluginName = 'CssLiveUpdate';
+
+    /**
 	 * Activates or deactivates the live css updating for the specified source and target
 	 * elements. The source is inherited from the regular jQuery selector. 
 	 *
