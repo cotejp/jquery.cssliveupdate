@@ -43,7 +43,7 @@ Let me know if you test it on other platforms so I can add them here.
 
 ## Demo
 
-You can view a live demo at this address http://cote.cc/projects/cssliveupdate
+You can view and try out a live demo at this address http://cote.cc/projects/cssliveupdate
 
 ## Requirements
 
