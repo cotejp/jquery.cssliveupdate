@@ -27,3 +27,5 @@ $("#some-source-element").cssLiveUpdate("deactivate");
 ```
 
 CssLiveUpdate has been tested and known to work on : Safari 6 (Mac), Firefox 23 (Mac), Chrome 29 (Mac, Win), Internet Explorer 10 (Win). Let me know if you test it on other platforms.
+
+You can view a live demo at this address http://cote.cc/projects/cssliveupdate
