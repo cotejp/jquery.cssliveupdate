@@ -149,8 +149,6 @@
             
             source.on('keyup.' + pluginName, function(event) {
                 applyRules(source, target);
-
-                
             });
             
             //Convert tabs to 2-space and prevent them from triggering a blur event
@@ -159,19 +157,6 @@
                 if (event.which === 9) {
                     event.preventDefault();
                     //insertTextAtCursor("  ");
-                }
-
-                // Check if a cut/copy/paste operation is ongoing. If it's the case, save
-                // the current content for comparison on keyup
-                if(event.ctrlKey || event.metaKey) {
-                    // var content = source.text();
-                    // source.on('keyup.' + pluginName, function() {
-                    //     alert(content + '      ' + source.text())
-                    //     if (content != source.text()) {
-                    //         alert('ok')
-                    //         applyRules(source, target);
-                    //     }
-                    // })
                 }
                 
             });
