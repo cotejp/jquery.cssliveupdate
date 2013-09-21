@@ -54,7 +54,7 @@ Let me know if you test it on other/older browsers and platforms so I can add th
 ## Requirements and dependencies
 
 * Mandatory: [jQuery](http://jquery.com/) 1.7.2 or above
-* Optional: [Highlight.js](http://softwaremaniacs.org/soft/highlight/en/) (for CSS code syntax coloring)
+* Optional: [Highlight.js](http://softwaremaniacs.org/soft/highlight/en/) (for CSS source syntax coloring)
 
 ## Reporting an Issue
 
