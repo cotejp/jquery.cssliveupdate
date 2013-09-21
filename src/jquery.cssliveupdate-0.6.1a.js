@@ -45,6 +45,8 @@
  * CONTENT FOR MODIFICATIONS ?
  *
  * @todo inset spaces at cursor position when tab is pressed.
+ *
+ * @todo update the README.md file
  */
 (function ($) {
 
