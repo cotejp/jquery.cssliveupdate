@@ -51,9 +51,10 @@ CssLiveUpdate has been tested and known to work on :
 
 Let me know if you test it on other/older browsers and platforms so I can add them here.
 
-## Requirements
+## Requirements and dependencies
 
-* [jQuery](http://jquery.com/) 1.10.2 or later: it only has been tested with 1.10.2 and 2.0.3 so far. If you test it on other versions, let me know so I can lower the minimum version.
+* Mandatory: [jQuery](http://jquery.com/) 1.7.2 or above
+* Optional: [Highlight.js](http://softwaremaniacs.org/soft/highlight/en/) (for CSS code syntax coloring)
 
 ## Reporting an Issue
 
