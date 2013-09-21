@@ -36,6 +36,8 @@
  * Firefox 23 (Mac), Chrome 29 (Mac, Win), Internet Explorer 10 (Win). Let me 
  * know if you test it on other platforms so I can update this list.
  *
+ * It has been tested and is known to work on jQuery 1.10.2 and jQuery 2.0.3.
+ *
  * (c) 2013, Jean-Philippe Côté - http://cote.cc/projects/cssliveupdate
  *
  * @todo make it so activate() can be called more than once for the same source
@@ -48,6 +50,8 @@
  * @todo insert spaces at cursor position when tab is pressed.
  *
  * @todo update the README.md file
+ *
+ * @todo when the target is not specified, it should default to the source 
  */
 (function ($) {
 
