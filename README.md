@@ -53,7 +53,7 @@ Let me know if you test it on other/older browsers and platforms so I can add th
 
 ## Requirements
 
-* [jQuery](http://jquery.com/) 1.10.2: it only has been tested with 1.10.2 and 2.0.3 so far. If you test it on other versions, let me know so I can lower the minimum version.
+* [jQuery](http://jquery.com/) 1.10.2 or later: it only has been tested with 1.10.2 and 2.0.3 so far. If you test it on other versions, let me know so I can lower the minimum version.
 
 ## Reporting an Issue
 
