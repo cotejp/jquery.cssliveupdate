@@ -7,7 +7,7 @@ WARNING: THIS PLUGIN HAS NOT BEEN TESTED ENOUGH TO BE CONSIDERED PRODUCTION-READ
 
 **CssLiveUpdate** is a jQuery plugin to continually update the `style` attribute of an element with the CSS rules found in another element. It facilitates the creation of live CSS demos for conferences, courses, etc.
 
-Typically, the source element is a form field (textarea, input or select) or a regular element with the "contenteditable" attribute set (although this is not mandatory).
+Typically, the source element is a form field (`textarea`, `input` or `select`) or a regular element with the `contenteditable` attribute set (although this is not mandatory).
 
 ## Demo
 
@@ -22,18 +22,18 @@ To use it, first load jQuery and the CssLiveUpdate plugin:
 <script src="js/jquery.cssliveupdate.js"></script>
 ```
 
-Then, identify the element(s) containing the CSS rules you want to apply elsewhere. On those elements, add a "data-cssliveupdate-target" attribute. This attribute should contain a jQuery selector string to target the element whose "style" attribute will be updated:
+Then, identify the element(s) containing the CSS rules you want to apply elsewhere. On those elements, add a `data-cssliveupdate-target` attribute. This attribute should contain a jQuery selector string to target the element whose `style` attribute will be updated:
 
 ```html
 <textarea data-cssliveupdate-target="#demo">a {color: red;}</textarea>
 <div id="demo">This div will have it's "style" attribute modified!</div>
 ```
 
-In this case, the #demo element's style attribute will be assigned the content of the textarea (after some CSS clean up is performed).
+In this case, the `#demo` element's `style` attribute will be assigned the content of the `textarea` (after some CSS clean up is performed).
 
-At init, all elements with the "data-cssliveupdate-target" attribute are automatically parsed and their target updated. 
+At init, all elements with the `data-cssliveupdate-target` attribute are automatically parsed and their target updated. 
 
-If you prefer to do it manually, do not use the "data-cssliveupdate-target" attribute and instead call CssLiveUpdate with the "activate" or "deactivate" keywords yourself:
+If you prefer to do it manually, do not use the `data-cssliveupdate-target` attribute and instead call CssLiveUpdate with the `activate` or `deactivate` keywords yourself:
 
 ```javascript
 $("#source-element").cssLiveUpdate("activate", "target-element");
