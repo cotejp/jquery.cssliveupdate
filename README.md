@@ -34,7 +34,6 @@ In this case, the `#demo` element's `style` attribute will be assigned the conte
 At init, all elements with the `data-cssliveupdate-target` attribute are automatically parsed and their target updated. 
 
 If you prefer to do it manually, do not use the `data-cssliveupdate-target` attribute and instead call CssLiveUpdate with the `activate` or `deactivate` keywords yourself:
-
 ```javascript
 $("#source-element").cssLiveUpdate("activate", "target-element");
 $("#source-element").cssLiveUpdate("deactivate");
@@ -53,8 +52,26 @@ Let me know if you test it on other/older browsers and platforms so I can add th
 
 ## Requirements and dependencies
 
-* Mandatory: [jQuery](http://jquery.com/) 1.7.2 or above
+* **Mandatory**: [jQuery](http://jquery.com/) 1.7.2 or above
 * Optional: [Highlight.js](http://softwaremaniacs.org/soft/highlight/en/) (for CSS source syntax coloring)
+
+If you decide to install [Highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for CSS syntax highlighting, you will need to add the following lines (or similar) to the HTML file:
+
+```html
+<link rel="stylesheet" href="styles/default.css">
+<script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+```
+
+This will automatically highlight all code on the page that is included in a  `<pre><code>...</code></pre>` block. To be safe, add the `css` class to the `code` tag so it knows which syntax is used:
+
+```css
+<pre><code class="css">
+a { 
+  color: red; 
+}
+</code></pre>
+```
 
 ## Reporting an Issue
 
