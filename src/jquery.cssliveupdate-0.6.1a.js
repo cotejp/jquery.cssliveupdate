@@ -26,7 +26,8 @@
  * automatically parsed and their target updated. 
  * 
  * If you prefer to do it manually, do not use the "data-cssliveupdate-target"
- * attribute and instead call the activate() or deactivate() methods yourself:
+ * attribute and instead call CssLiveUpdate with the "activate" or "deactivate" 
+ * keywords yourself:
  *
  *   $("#source-element").cssLiveUpdate("activate", "#target-element");
  *   $("#source-element").cssLiveUpdate("deactivate");
@@ -44,7 +45,7 @@
  * source content and then apply it to the target. OR SHOULD WE SIMPLY WATCH THE
  * CONTENT FOR MODIFICATIONS ?
  *
- * @todo inset spaces at cursor position when tab is pressed.
+ * @todo insert spaces at cursor position when tab is pressed.
  *
  * @todo update the README.md file
  */
@@ -52,7 +53,7 @@
 
     "use strict";
 
-    // Plugin name (used, notably, for event namespacing)
+    // Plugin name (used, notably, for event namespacing) and default options
     var pluginName      =   'CssLiveUpdate',
         defaultOptions  =   {
                                 applyNow: true
@@ -198,6 +199,7 @@
 
                 });
             
+                // Prevent TABs from blurring the field while editing
                 if (event.which === 9) {
                     event.preventDefault();
                     //insertTextAtCursor("  ");
