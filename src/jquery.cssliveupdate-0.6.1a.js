@@ -36,7 +36,7 @@
  * Firefox 23 (Mac), Chrome 29 (Mac, Win), Internet Explorer 10 (Win). Let me 
  * know if you test it on other platforms so I can update this list.
  *
- * It has been tested and is known to work on jQuery 1.10.2 and jQuery 2.0.3.
+ * It has been tested and is known to work on jQuery v1.7.2 and above.
  *
  * (c) 2013, Jean-Philippe Côté - http://cote.cc/projects/cssliveupdate
  *
