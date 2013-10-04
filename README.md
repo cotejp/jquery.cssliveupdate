@@ -31,7 +31,7 @@ Then, flag all elements whose content should continually update the page styles 
 or
 
 ```
-<div data-cssliveupdate content-editable>a {color: blue}</div
+<div data-cssliveupdate content-editable>a {color: blue}</div>
 ```
 
 You can watch as many elements as you like. Their contents will all be merged in a `<style>` tag in the `<head>` of the page.
