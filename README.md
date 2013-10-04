@@ -5,9 +5,9 @@ WARNING: THIS PLUGIN HAS NOT BEEN TESTED ENOUGH TO BE CONSIDERED PRODUCTION-READ
 
 ## Description
 
-**CssLiveUpdate** is a jQuery plugin to continually update the `style` attribute of an element with the CSS rules found in another element. It facilitates the creation of live CSS demos for conferences, courses, etc.
+**CssLiveUpdate** updates the page's CSS styles with the content of the HTML element(s) its watching. This makes it very easy to create a CSS demo page where any CSS typed into a form field is added in a `style` tag in the `head` of the page. It is meant to be used for CSS demos, conferences, etc.
 
-Typically, the source element is a form field (`textarea`, `input` or `select`) or a regular element with the `contenteditable` attribute set (although this is not mandatory).
+The elements being watched are typically form elements (`textarea` or `input`) or a regular element bearing the `contenteditable` attribute.
 
 ## Demo
 
@@ -15,33 +15,39 @@ You can view and try out a live demo at this address http://cote.cc/projects/css
 
 ## Setup
 
-To use it, first load jQuery and the CssLiveUpdate plugin:
+To use it, first load jQuery and then load the CssLiveUpdate plugin. Typically these two lines would be placed right before `</body>` :
 
 ```html
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="js/jquery.cssliveupdate.js"></script>
+<script src="jquery.cssliveupdate.js"></script>
 ```
 
-Then, identify the element(s) containing the CSS rules you want to apply elsewhere. On those elements, add a `data-cssliveupdate-target` attribute. This attribute should contain a jQuery selector string to target the element whose `style` attribute will be updated:
+Then, flag all elements whose content should continually update the page styles with the `data-cssliveupdate` attribute. For example: 
 
 ```html
-<textarea data-cssliveupdate-target="#demo">a {color: red;}</textarea>
-<div id="demo">This div will have it's "style" attribute modified!</div>
+<textarea data-cssliveupdate>a {color: red}</textarea> 
 ```
 
-In this case, the `#demo` element's `style` attribute will be assigned the content of the `textarea` (after some CSS clean up is performed).
+or
 
-At init, all elements with the `data-cssliveupdate-target` attribute are automatically parsed and their target updated. 
+```
+<div data-cssliveupdate content-editable>a {color: blue}</div
+```
 
-If you prefer to do it manually, do not use the `data-cssliveupdate-target` attribute and instead call CssLiveUpdate with the `activate` or `deactivate` keywords yourself:
+You can watch as many elements as you like. Their contents will all be merged in a `<style>` tag in the `<head>` of the page.
+ 
+At init, all elements with the `data-cssliveupdate` attribute are parsed and their content is automatically added to the `<style>` tag.
+
+If you prefer to do it manually, do not use the `data-cssliveupdate` attribute and instead call CssLiveUpdate with the `activate` or `deactivate` keyword yourself:
+
 ```javascript
-$("#source-element").cssLiveUpdate("activate", "target-element");
-$("#source-element").cssLiveUpdate("deactivate");
+$("#source-element").CssLiveUpdate("activate");
+$("#source-element").CssLiveUpdate("deactivate");
 ```
 
 ## Browser support
 
-CssLiveUpdate has been tested and known to work on : 
+CssLiveUpdate has been tested and is known to work on : 
 
 * Safari 6 (Mac)
 * Firefox 23 (Mac)
