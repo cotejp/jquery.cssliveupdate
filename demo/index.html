@@ -5,40 +5,43 @@
     <head>
     
         <meta charset="UTF-8">
-        <title>CssLiveUpdate Demo - by Jean-Philippe Côté</title>
-        
+        <title>CssLiveUpdate Demo - by Jean-Philippe Côté</title> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
         <style type="text/css">
             body {
 				background-color:#333;
-				padding: 4%;
-				width: 92%;
-				color:#CCC;
-				margin: 0;
-				font: 1.5em "Gill Sans", "Gill Sans MT", "Myriad Pro", Helvetica, Arial, sans-serif;
-				text-align:justify;
-				float: left;
+				padding: 0 4%;
+				width: 80%;
+				color: #CCC;
+				margin: 0 auto;
+				font: 1.25em "Gill Sans", "Gill Sans MT", "Myriad Pro", Helvetica, Arial, sans-serif;
+				text-align: justify;
+                overflow: auto;
         	}
-			#css, #demo {
-				float: left;
-				width: 44%;
-				height: 250px;
-				border: #666 solid 1px;
-				padding: 2%;
-				color: white;
-				font: 0.8em monospace;
-			}
-			h1 { margin: 0.2em 0; }
-			#demo { float: right }
-			pre, p { margin: 0; }
-			p { margin-bottom: 1em; }
-			footer { font-size:0.75em; padding-top:1em; clear:both; }
+            #demo, .inputs {
+                width: 44%;
+                min-height: 300px;
+                padding: 20px 2%;
+                box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+                margin: 15px 0 20px 0
+            }
+            .inputs { float: left; }
+			#demo { float: right; }
+			footer { font-size:0.7em; clear:both; }
 			a { color: #CC9393; }
+            pre { margin: 0 0 2em 0; }
+            code { min-height: 75px; }
+            textarea { width: 98%; margin: 0; padding: 1%; min-height: 60px; }
+            p { margin: 0 0 0.5em 0; }
+            h1 { margin: .3em 0; }
         </style>
         
+        <!-- Import jQuery and CssLiveUpdate (ideally place scripts right before </body>) -->
         <script src="js/jquery-1.10.2.min.js"></script>
-        <script src="../src/jquery.cssliveupdate-0.6.1a.js"></script>
+        <script src="../src/jquery.cssliveupdate-0.7a.js"></script>
         
-        <!-- Highlight.js only does syntax coloring and is otherwise unrelated to this example. -->
+        <!-- Highlight.js only does syntax coloring and is otherwise optional -->
         <link rel="stylesheet" href="js/highlight.js/zenburn.css">
 		<script src="js/highlight.js/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
@@ -49,19 +52,31 @@
     
         <h1>CssLiveUpdate Demo</h1>
 
-        <p>Modify the CSS rules on the left to see the effect on the right. For example, 
-        uncomment the <code>color: #363;</code> instruction to change the color of the text in 
-        the <code>#demo</code> div.</p>
+        <p>Modify the CSS rules in one of the boxes on the left to dynamically see the effect on the 
+        right. For example, change the <code>color: grey</code> instruction to alter the color of the 
+        text in the <code>#demo</code> div.</p>
     
-        <!-- The container of the CSS rules (could also be a form tag like textarea) -->
-        <pre><code id="css" class="css" data-cssliveupdate-target="#demo" contenteditable="true">#demo {
+        <div class="inputs">
+
+            <p> A <i>contenteditable</i>-enabled element:</p>
+            <pre><code class="css" data-cssliveupdate contenteditable>#demo {
     background-color: #353;
 }
 </code></pre>
+            
+            <p> A <i>textarea</i> form element:</p>
+            <textarea data-cssliveupdate>#demo {
+    color: grey
+}
+            </textarea>
+
+        </div>
+
+        <div id="demo">
+            #demo
+        </div>
         
-        <div id="demo">#demo</div>
-        
-        <footer>CSS syntax coloring is provided by the awesome 
+        <footer>&copy; 2013, <a target="_blank" href="http://cote.cc/projects/cssliveupdate">Jean-Philippe Côté</a>. CSS syntax coloring in the contenteditable-enabled element is provided by the awesome 
         <a target="_blank" href="http://softwaremaniacs.org/soft/highlight/en/">highlight.js</a> 
         library.</footer>
 
