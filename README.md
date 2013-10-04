@@ -5,9 +5,9 @@ WARNING: THIS PLUGIN HAS NOT BEEN TESTED ENOUGH TO BE CONSIDERED PRODUCTION-READ
 
 ## Description
 
-**CssLiveUpdate** updates the page's CSS styles with the content of the HTML element(s) its watching. This makes it very easy to create a CSS demo page where any CSS typed into a form field is added in a `style` tag in the `head` of the page. It is meant to be used for CSS demos, conferences, etc.
+**CssLiveUpdate** updates the page's CSS styles with the content of the HTML element(s) its watching. This makes it very easy to create a CSS demo page where any CSS typed into a form field is added in a `<style>` tag in the `<head>` of the page. It is meant to be used for CSS demos, conferences, etc.
 
-The elements being watched are typically form elements (`textarea` or `input`) or a regular element bearing the `contenteditable` attribute.
+The elements being watched are typically form elements (`<textarea>` or `<input>`) or a regular element bearing the `contenteditable` attribute.
 
 ## Demo
 
