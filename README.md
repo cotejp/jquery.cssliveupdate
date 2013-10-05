@@ -11,7 +11,7 @@ The elements being watched are typically form elements (`<textarea>` or `<input>
 
 ## Demo
 
-You can view and try out a live demo at this address http://cote.cc/projects/cssliveupdate
+A simple demo is included in the demo folder. You can also try out a live demo at this address http://cote.cc/projects/cssliveupdate
 
 ## Setup
 
