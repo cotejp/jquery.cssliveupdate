@@ -1,21 +1,21 @@
 jquery.cssliveupdate
 ====================
 
-WARNING: THIS PLUGIN HAS NOT BEEN TESTED ENOUGH TO BE CONSIDERED PRODUCTION-READY (HENCE THE ALPHA VERSION DESIGNATION). USE AT YOUR OWN RISK. MEANWHILE, YOU ARE WELCOME TO SEND ME COMMENTS, SUGGESTIONS AND BUG REPORTS.
+>WARNING: THIS PLUGIN HAS NOT BEEN TESTED ENOUGH TO BE CONSIDERED PRODUCTION-READY YET (HENCE THE ALPHA VERSION DESIGNATION). USE AT YOUR OWN RISK. MEANWHILE, YOU ARE WELCOME TO SEND ME COMMENTS, SUGGESTIONS AND BUG REPORTS.
 
 ## Description
 
-**CssLiveUpdate** updates the page's CSS styles with the content of the HTML element(s) its watching. This makes it very easy to create a CSS demo page where any CSS typed into a form field is added in a `<style>` tag in the `<head>` of the page. It is meant to be used for CSS demos, conferences, etc.
+**CssLiveUpdate** updates the page's CSS styles with the textual content of the HTML element(s) it's watching. This makes it very easy to create a CSS demo page where any CSS typed into a form field is added in the `<head>` of the page via a `<style class="cssliveupdate">` tag. It is meant to be used for CSS demos, classes, conferences, etc.
 
-The elements being watched are typically form elements (`<textarea>` or `<input>`) or a regular element bearing the `contenteditable` attribute.
+The elements being watched are typically form elements (`<textarea>` or `<input>`) or any regular element bearing the `contenteditable` attribute.
 
 ## Demo
 
-A simple demo is included in the demo folder. You can also try out a live demo at this address http://cote.cc/projects/cssliveupdate
+A simple demo is included in the demo folder. It is pretty self-explanatory and should be enough to get you started. You can also try out a live demo at this address http://cote.cc/projects/cssliveupdate
 
 ## Setup
 
-To use it, first load jQuery and then load the CssLiveUpdate plugin. Typically these two lines would be placed right before `</body>` :
+To use CssLiveUpdate, first load jQuery and then load the CssLiveUpdate plugin. Typically these two lines would be placed right before `</body>` :
 
 ```html
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -30,13 +30,15 @@ Then, flag all elements whose content should continually update the page styles 
 
 or
 
-```
+```html
 <div data-cssliveupdate content-editable>a {color: blue}</div>
 ```
 
-You can watch as many elements as you like. Their contents will all be merged in a `<style>` tag in the `<head>` of the page.
+You can watch as many elements as you like. Their contents will all be merged in the `<style class="cssliveupdate">` tag in the `<head>` of the page.
  
 At init, all elements with the `data-cssliveupdate` attribute are parsed and their content is automatically added to the `<style>` tag.
+
+That's it. Pretty easy, huh?
 
 If you prefer to do it manually, do not use the `data-cssliveupdate` attribute and instead call CssLiveUpdate with the `activate` or `deactivate` keyword yourself:
 
@@ -69,7 +71,7 @@ If you decide to install [Highlight.js](http://softwaremaniacs.org/soft/highligh
 <script>hljs.initHighlightingOnLoad();</script>
 ```
 
-This will automatically highlight all code on the page that is included in a  `<pre><code>...</code></pre>` block. To be safe, add the `css` class to the `code` tag so it knows which syntax is used:
+This will automatically highlight all code on the page that is included in a  `<pre><code>...</code></pre>` block. To be safe, add the `css` class to the `code` tag so it knows which syntax coloring to use:
 
 ```css
 <pre><code class="css">
@@ -81,10 +83,11 @@ a {
 
 ## Reporting an Issue
 
-1. Before reporting, make sure you have the latest version.
-2. Make sure the problem you are reporting is reproducible. Use http://jsbin.com to provide an example page.
-3. Indicate what browser(s) the issue can be reproduced in. **Note: IE Compatibilty modes issues will not be addressed.**
+1. Before reporting, make sure you have the latest version of CssLiveUpdate and a supported version of jQuery.
+2. Make sure your JavaScript code is free of bugs. You can use a tool such as [JSHint](http://www.jshint.com/) to do so.
+2. Make sure the problem you are reporting is reproducible. Use [JSBin](http://jsbin.com) to provide an example page.
+3. Indicate what browser(s) and platform(s) the issue can be reproduced in. **Note: issues that arise in Internet Explorer while in "compatibility mode" will not be addressed.**
 
 ## License
 
-To be completed.
+I'll get back to you on this...
