@@ -81,7 +81,7 @@
             /moz-binding|@import|@charset/i,
 
             // Other potentially dangerous stuff
-            /behaviou?r|expression|(java|vb)?script|[\<]|\\\w/i,
+            /behaviou?r|expression|(java|vb)?script|[<]|\\\w/i,
 
             // Low bytes
             /[\x00-\x08\x0B\x0C\x0E-\x1F]/,
@@ -356,7 +356,7 @@
               $(':focus')[0].value += text;
             }
 
-        };
+        }
 
         // Initial code being run for the CssLiveUpdate object function (support
         // traditional jQuery chaining).
